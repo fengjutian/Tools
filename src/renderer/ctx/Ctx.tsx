@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Modal, Form, Input, Checkbox } from 'antd';
+import { Button, Modal, Form, Input, Checkbox, Divider } from 'antd';
+import Icon from './Icon';
 
 type ICtx = {
   message: string;
@@ -31,9 +32,13 @@ const Ctx: React.FC<ICtx> = () => {
 
   return (
     <>
+      <Divider>按钮</Divider>
       <Button type="primary" onClick={() => showAddDialog()}>
         新加
       </Button>
+
+      <Divider>图标</Divider>
+      <Icon />
 
       <Modal
         title="新加"
